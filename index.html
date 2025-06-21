@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="meteorology.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+
+        <h1> Weather App </h1>
+
+        <section>
+
+            <form id="weather-form">
+                <input type="text" id="city" placeholder="Enter city name" required>
+                <button type="button" id="btn">Get Weather</button>
+            </form>
+        </section>
+
+        <section id="info">
+
+            <div id="weather-info">
+                <h2>Weather Information</h2>
+                <span id="city-name"> </span>
+                <span id="temperature"> </span>
+                <span id="condition"></span>
+                <img id="icon"></img>
+                <details>
+                    <summary>More Details about the 7 next dayes</summary>
+                    <span id="date"></span>
+                    <span id="day"></span>
+                </details>
+            </div>
+
+            <div id="error-message" class="error-message">
+                <p id="p-error"></p>
+            </div>
+
+
+        </section>
+
+
+
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
