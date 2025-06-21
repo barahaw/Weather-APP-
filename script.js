@@ -38,7 +38,7 @@ function showNext7DaysDates(forecastData) {
 }
 
 async function weather(city) {
-  const api = `http://api.weatherapi.com/v1/current.json?key=46ed0baf84724773a86135452252106&q=${encodeURIComponent(
+  const api = `https://api.weatherapi.com/v1/current.json?key=46ed0baf84724773a86135452252106&q=${encodeURIComponent(
     city
   )}&aqi=no`;
   try {
@@ -59,7 +59,7 @@ async function weather(city) {
 }
 
 async function forecast(city, days) {
-  const api = `http://api.weatherapi.com/v1/forecast.json?key=46ed0baf84724773a86135452252106&q=${encodeURIComponent(
+  const api = `https://api.weatherapi.com/v1/forecast.json?key=46ed0baf84724773a86135452252106&q=${encodeURIComponent(
     city
   )}&days=${encodeURIComponent(days)}&aqi=no&alerts=no`;
   try {
