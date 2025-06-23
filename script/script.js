@@ -8,6 +8,7 @@ const Condition = document.getElementById("condition");
 const icon = document.getElementById("icon");
 const errorMessage = document.getElementById("error-message");
 const pError = document.getElementById("p-error");
+let WEATHER_API_KEY;
 
 function showError(message) {
   errorMessage.style.display = "block";
@@ -38,7 +39,7 @@ function showNext7DaysDates(forecastData) {
 }
 
 async function weather(city) {
-  const api = `https://api.weatherapi.com/v1/current.json?key=46ed0baf84724773a86135452252106&q=${encodeURIComponent(
+  const api = `https://api.weatherapi.com/v1/current.json?key=${WEATHER_API_KEY}&q=${encodeURIComponent(
     city
   )}&aqi=no`;
   try {
@@ -59,7 +60,7 @@ async function weather(city) {
 }
 
 async function forecast(city, days) {
-  const api = `https://api.weatherapi.com/v1/forecast.json?key=46ed0baf84724773a86135452252106&q=${encodeURIComponent(
+  const api = `https://api.weatherapi.com/v1/forecast.json?key=${WEATHER_API_KEY}&q=${encodeURIComponent(
     city
   )}&days=${encodeURIComponent(days)}&aqi=no&alerts=no`;
   try {
